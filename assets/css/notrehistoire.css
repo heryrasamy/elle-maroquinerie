@@ -1,0 +1,148 @@
+/* =====================================================
+   NOTRE HISTOIRE — ELLE MAROQUINERIE
+===================================================== */
+
+.history-page {
+  background: #FAF8F2;
+  padding: 120px 60px 160px;
+  font-family: 'Sanchez', serif;
+  color: #302324;
+}
+
+/* ==============================
+   SECTION PRINCIPALE
+============================== */
+
+.history-hero {
+  max-width: 1320px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 70px;
+  align-items: start;
+}
+
+/* ==============================
+   TEXTE GAUCHE
+============================== */
+
+.history-text p {
+  font-family: 'Playfair Display', serif;
+  font-size: 26px;
+  line-height: 35px;
+  font-weight: 700;
+  margin: 0;
+  white-space: normal;
+}
+
+/* ==============================
+   VISUEL DROIT
+============================== */
+
+.history-visual {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.history-square {
+  width: 546px;
+  height: 546px;
+  background-image: url("../images/carre-design.png");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding-top: 60px;
+  position: relative;
+  background-image: url("../images/carre-design-1.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  /* ✅ Placement du texte */
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding-top: 56px;
+
+  border-radius: 0; /* Figma = carré net */
+
+}
+
+
+/* ==============================
+   TEXTE SUR LE CARRÉ
+============================== */
+
+.history-quote {
+  font-family: "Playfair Display SC", serif;
+  font-style: italic;
+  font-weight: 700; /* Bold */
+  font-size: clamp(40px, 4vw, 52px);
+  line-height: 1.3;
+  letter-spacing: 0;
+  text-align: center;
+  color: #FAF8F2;
+  margin: 0;
+  max-width: 420px;
+  text-transform: none; /* ❌ stop les MAJ */
+  text-shadow: 0 2px 8px rgba(0,0,0,0.18);
+}
+
+/* ==============================
+   HEADER NAV — état actif
+============================== */
+
+.header-nav a.active {
+  border-bottom: 2px solid #302324;
+  padding-bottom: 4px;
+}
+
+
+/* ==============================
+   RESPONSIVE
+============================== */
+
+@media (max-width: 1100px) {
+  .history-hero {
+    grid-template-columns: 1fr;
+    gap: 60px;
+  }
+
+  .history-visual {
+    justify-content: center;
+  }
+
+  .history-square {
+  width: 546px;
+  height: 546px;
+  }
+
+  .history-quote {
+    font-size: 48px;
+    line-height: 62px;
+  }
+}
+
+@media (max-width: 600px) {
+  .history-page {
+    padding: 80px 20px 120px;
+  }
+
+  .history-text p {
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  .history-square {
+    width: 100%;
+    height: 360px;
+  }
+
+  .history-quote {
+    font-size: 36px;
+    line-height: 46px;
+  }
+}

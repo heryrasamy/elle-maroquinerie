@@ -1,0 +1,343 @@
+/* =====================================================
+   PAIEMENT — ELLE MAROQUINERIE
+   Page checkout (paiement.html)
+   Version finale alignée Figma
+===================================================== */
+
+/* ==============================
+   Reset local léger
+============================== */
+
+.checkout-page,
+.checkout-page * {
+  box-sizing: border-box;
+}
+
+/* ==============================
+   Layout général
+============================== */
+
+.checkout-page {
+  background: #f7f3ee;
+  padding: 40px 20px;
+}
+
+.checkout-layout {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: minmax(560px, 1.2fr) minmax(420px, 0.8fr);
+  gap: 40px;
+  align-items: stretch;
+}
+
+/* ==============================
+   BLOC PAIEMENT — encadré marron
+============================== */
+
+.checkout-payment {
+  background: #2b1e18;
+  padding: 28px 24px;
+  border-radius: 18px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Titre */
+.checkout-payment h2 {
+  color: #f5efe9;
+  margin-bottom: 6px;
+}
+
+/* Inputs sur fond sombre */
+.checkout-payment input {
+  background: #f7f3ee;
+  border: none;
+  color: #2b1e18;
+  background: #f7f3ee;
+  border: 2px solid rgba(255,255,255,0.8);
+  box-shadow: inset 0 0 0 9999px #f7f3ee;
+}
+
+/* Placeholder */
+.checkout-payment input::placeholder {
+  color: #6f625a;
+}
+
+/* Checkbox */
+.checkout-payment .checkbox-line {
+  color: #f5efe9;
+  font-size: 12px;
+  gap: 8px;
+}
+
+/* Ligne prénom / nom */
+.checkout-payment .form-row {
+  gap: 10px;
+}
+
+/* Bouton */
+.checkout-payment .btn-pay {
+  margin-top: 20px;
+  background: #f5efe9;
+  color: #2b1e18;
+}
+
+
+@media (max-width: 900px) {
+  .checkout-layout {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ==============================
+   Colonne gauche — Formulaire
+============================== */
+
+.checkout-left {
+  max-width: 520px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  margin-top: 40px;
+  text-transform: uppercase;
+
+}
+
+.checkout-block h2 {
+  font-size: 14px;
+  letter-spacing: 1.2px;
+  margin-bottom: 20px;
+  font-weight: 600;
+   margin-bottom: 24px;
+  text-transform: uppercase;
+  color: #2b1e18;
+}
+
+/* ==============================
+   Champs (style Figma)
+============================== */
+
+.checkout-block input {
+  width: 100%;
+  padding: 14px 18px;
+  margin-bottom: 14px;
+  border-radius: 999px;
+  border: 2px solid #c8b9ad;
+  background: transparent;
+  font-size: 14px;
+  font-family: inherit;
+}
+.checkout-block:nth-of-type(2) .checkbox-line {
+  margin: 8px 0 16px;
+  font-size: 12px;
+}
+
+
+.checkout-block input::placeholder {
+  color: #6f625a;
+}
+
+.checkout-block input:focus {
+  outline: none;
+  border-color: #2b1e18;
+}
+
+/* Champs côte à côte */
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+/* ==============================
+   Checkbox
+============================== */
+
+.checkbox-line {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 13px;
+  color: #2b1e18;
+  margin: 10px 0 20px;
+}
+
+.checkbox-line input {
+  width: auto;
+  margin: 0;
+}
+
+/* ==============================
+   Bouton paiement (gauche)
+============================== */
+
+.checkout-left .btn-pay {
+  margin-top: 24px;
+  width: 100%;
+  padding: 16px;
+  background: #2b1e18;
+  color: #f7f3ee;
+  border: none;
+  border-radius: 999px;
+  font-size: 14px;
+  letter-spacing: 1px;
+  cursor: pointer;
+}
+
+.checkout-left .btn-pay:hover {
+  opacity: 0.9;
+}
+
+/* ==============================
+   Colonne droite — Résumé
+============================== */
+
+.checkout-right {
+  background: #302324;
+  color: #f5efe9;
+
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+
+  padding: 80px 40px 60px;
+
+  /* IMPORTANT : on enlève toute ambiguïté */
+  position: relative;
+}
+
+
+
+.checkout-summary {
+  margin: 0;
+  padding: 0;
+
+  width: 100%;
+  max-width: 360px;
+
+  align-self: flex-start;   /* 👈 clé verticale */
+}
+
+
+
+/* Logo */
+.summary-logo {
+  display: block;
+  margin: 0 auto 40px;
+  max-width: 120px;
+ opacity: 1;
+  filter: brightness(2.5) contrast(1.05);
+}
+
+/* ==============================
+   Produit résumé
+============================== */
+
+.summary-product {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  margin-bottom: 36px;
+  align-items: flex-start;
+}
+
+.summary-thumb {
+  width: 80px;
+  height: 80px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 12px;
+  flex-shrink: 0;
+}
+
+.summary-info p {
+  margin: 0;
+  font-size: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  color: #f5efe9;
+}
+
+.summary-info p:first-child {
+  font-weight: 500;
+}
+
+.summary-info p:last-child {
+  opacity: 0.85;
+}
+
+/* ==============================
+   Totaux
+============================== */
+
+.summary-line {
+  display: flex;
+  justify-content: space-between;
+  margin: 14px 0;
+  font-size: 14px;
+}
+
+.summary-line.total {
+  margin-top: 22px;
+  padding-top: 14px;
+  border-top: 1px solid rgba(255, 255, 255, 0.25);
+  font-weight: 600;
+}
+
+/* ==============================
+   Bouton paiement (droite)
+============================== */
+
+
+.checkout-summary .btn-pay {
+  width: 70%;
+  max-width: 260px;
+  padding: 14px 0;
+
+  background: #f5efe9;
+  color: #2b1e18;
+
+  border: none;
+  border-radius: 999px;
+
+  font-size: 13px;
+  letter-spacing: 1px;
+  cursor: pointer;
+}
+
+.summary-actions {
+  display: flex;
+  justify-content: center;
+  margin-top: 42px;
+}
+
+.checkout-right .btn-pay:hover {
+  opacity: 0.9;
+}
+
+/* ==============================
+   Responsive mobile
+============================== */
+
+@media (max-width: 600px) {
+  .checkout-page {
+    padding: 20px 10px;
+  }
+
+  .checkout-left {
+    max-width: 100%;
+  }
+
+  .checkout-right {
+    padding: 40px 20px;
+  }
+
+  .summary-thumb {
+    width: 65px;
+    height: 65px;
+  }
+  
+}

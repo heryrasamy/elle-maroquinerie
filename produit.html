@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <title>Profil – ELLE Maroquinerie</title>
+
+  <link rel="stylesheet" href="assets/css/profil.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display+SC:wght@700&family=Sanchez&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+  <!-- HEADER (tu peux garder le tien si déjà global) -->
+  <header class="site-header">
+    <nav class="nav-top">
+      <a href="profil.html">Profil</a>
+      <div class="logo">ELLE Maroquinerie</div>
+      <div class="nav-right">
+        <a href="panier.html">Panier</a>
+        <a href="recherche.html">Recherche</a>
+        <a href="admin.html">Admin</a>
+      </div>
+    </nav>
+
+    <nav class="nav-main">
+      <a href="boutique.html">LA BOUTIQUE</a>
+      <a href="notrehistoire.html">NOTRE HISTOIRE</a>
+      <a href="contact.html">CONTACT</a>
+    </nav>
+  </header>
+
+  <!-- PAGE PROFIL -->
+  <main class="profil-page" id="profilPage">
+
+    <!-- CONTENU PROTÉGÉ (visible uniquement connecté) -->
+    <section class="profil-order">
+      <h2>COMMANDE EN COURS</h2>
+      <div id="orderBox"></div>
+    </section>
+
+    <section class="profil-infos">
+      <div class="profil-field">
+        <label>Email</label>
+        <div class="line"></div>
+      </div>
+
+      <div class="profil-field">
+        <label>Adresses</label>
+        <div class="line"></div>
+      </div>
+
+      <button id="logoutBtn" class="btn-logout">SE DÉCONNECTER</button>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="footer-left">
+      <h3>INFORMATIONS</h3>
+      <p>Conditions générales de vente</p>
+      <p>Mentions légales</p>
+    </div>
+
+    <div class="footer-right">
+      <p>Une question, une commande spéciale ou un partenariat ?<br>
+        L’équipe ELLE Maroquinerie vous répond avec plaisir !</p>
+
+      <a href="contact.html" class="btn-contact">CONTACTEZ-NOUS →</a>
+    </div>
+  </footer>
+
+  <script src="assets/js/profil.js"></script>
+</body>
+</html>

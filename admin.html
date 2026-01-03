@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Administration – ELLE Maroquinerie</title>
+
+    <!-- CSS global + admin -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/admin.css">
+</head>
+
+<body>
+
+<!-- 🔐 Protection admin : redirection si non connecté -->
+<script>
+    if (localStorage.getItem("adminAuth") !== "true") {
+        window.location.href = "admin-login.html";
+    }
+</script>
+
+<header class="header">
+    <!-- Header identique au site -->
+</header>
+
+<main class="admin-page">
+
+    <section class="admin-box">
+
+        <div class="admin-header">
+            <h2>Gestion des sacs</h2>
+
+            <div class="admin-actions">
+                <a href="admin-login.html" class="btn-outline">⟳ Recharger</a>
+                <a href="la-boutique.html" class="btn-dark">Retour boutique</a>
+                <a href="#" class="btn-outline" id="logoutBtn">Déconnexion</a>
+            </div>
+        </div>
+      <form class="admin-form" id="productForm">
+
+            <h3>Ajouter un sac</h3>
+
+            <input type="text" placeholder="Titre">
+            <textarea placeholder="Description"></textarea>
+            <input type="text" placeholder="Prix (ex : 45,50 €)">
+
+            <div class="file-row">
+                <label class="file-btn">
+                    Choisir un fichier
+                    <input type="file" hidden>
+                </label>
+                <span>Aucun fichier choisi</span>
+            </div>
+
+            <input type="number" placeholder="Nombre d’exemplaires disponibles">
+
+            <button type="submit" class="btn-outline">
+                + Ajouter le sac
+            </button>
+
+        </form>
+
+        <hr>
+
+        <div class="admin-list">
+            <h3>Liste des sacs</h3>
+            <p>Aucun produit (les produits par défaut sont utilisés sur la boutique)</p>
+        </div>
+
+    </section>
+
+</main>
+
+<footer class="footer">
+    <!-- Footer identique au site -->
+</footer>
+
+<!-- 🧠 Scripts JS TOUT EN BAS (ordre important) -->
+<script src="assets/js/admin-auth.js"></script>
+<script src="assets/js/admin-products.js"></script>
+
+<!-- ✅ Script inline de vérification -->
+<script>
+    console.log("SCRIPT INLINE OK");
+
+    const logoutBtn = document.getElementById("logoutBtn");
+
+    if (logoutBtn) {
+        logoutBtn.addEventListener("click", function (e) {
+            e.preventDefault();
+            localStorage.removeItem("adminAuth");
+            window.location.href = "admin-login.html";
+        });
+    }
+</script>
+
+</body>
+</html>

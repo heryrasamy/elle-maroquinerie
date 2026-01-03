@@ -1,0 +1,104 @@
+/* ==============================
+   PAGE INSCRIPTION
+============================== */
+
+.inscription-page {
+  background: #FAF8F2;
+  min-height: 100vh;
+  padding: 120px 20px 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 80px;
+}
+
+/* ==============================
+   Cartes profil
+============================== */
+
+.profile-box {
+  width: 100%;
+  max-width: 680px;
+  border: 2px solid #302324;
+  border-radius: 48px;
+  padding: 48px 56px;
+  background: transparent;
+}
+
+.profile-box h2 {
+  font-family: "Playfair Display SC", serif;
+  font-size: 32px;
+  text-align: center;
+  margin-bottom: 32px;
+  color: #302324;
+}
+
+/* ==============================
+   Labels & Inputs
+============================== */
+
+.profile-box label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 16px;
+  color: #302324;
+}
+
+.profile-box input {
+  width: 100%;
+  margin-bottom: 24px;
+  padding: 12px 0;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid #302324;
+  font-size: 16px;
+  font-family: inherit;
+}
+
+.profile-box input:focus {
+  outline: none;
+  border-bottom: 2px solid #302324;
+}
+
+/* ==============================
+   Boutons
+============================== */
+
+.btn-outline {
+  margin-top: 16px;
+  background: transparent;
+  border: 1.5px solid #302324;
+  border-radius: 999px;
+  padding: 10px 22px;
+  font-size: 15px;
+  cursor: pointer;
+  color: #302324;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.btn-outline:hover {
+  background: #302324;
+  color: #FAF8F2;
+}
+
+.form-message {
+  transition: all 0.2s ease;
+}
+
+
+/* ==============================
+   Responsive
+============================== */
+
+@media (max-width: 768px) {
+  .profile-box {
+    padding: 40px 28px;
+    border-radius: 32px;
+  }
+
+  .profile-box h2 {
+    font-size: 26px;
+  }
+}

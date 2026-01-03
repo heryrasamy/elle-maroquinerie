@@ -1,0 +1,73 @@
+/* PAGE BOUTIQUE */
+.boutique-page {
+    background: #fbf7f1;
+    padding-top: 120px; /* espace sous header */
+}
+
+/* SECTION */
+.boutique {
+    padding: 80px 120px;
+}
+
+.boutique-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* fidèle Figma desktop */
+    gap: 80px 60px;
+}
+
+/* CARTE PRODUIT */
+.product-card {
+    display: flex;
+    flex-direction: column;
+    gap: 16px; 
+}
+
+
+/* IMAGE PLACEHOLDER */
+.product-image {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    background: #E0E0E0;
+
+}
+
+/* TEXTE */
+.product-line,
+.product-color {
+    font-size: 18px;
+}
+
+.product-name {
+    font-weight: 500;
+}
+
+.product-price {
+    font-weight: 500;
+}
+
+
+.product-color {
+    font-size: 18px;
+}
+/* ===========================
+   RESPONSIVE – MOBILE
+   =========================== */
+@media screen and (max-width: 768px) {
+
+    .boutique {
+        padding: 40px 20px;
+    }
+
+    .boutique-grid {
+        grid-template-columns: 1fr !important;
+        gap: 40px;
+    }
+
+    .product-line {
+        font-size: 16px;
+    }
+
+    .product-color {
+        font-size: 15px;
+    }
+}

@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <title>Merci pour votre commande • ELLE Maroquinerie</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- CSS global -->
+  <link rel="stylesheet" href="assets/css/style.css">
+
+  <!-- jsPDF -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+  <style>
+    body {
+      background: #f7f3ee;
+    }
+
+    .merci-container {
+      max-width: 720px;
+      margin: 80px auto;
+      background: #fff;
+      padding: 50px;
+      border-radius: 24px;
+      text-align: center;
+    }
+
+    .merci-container h1 {
+      font-size: 26px;
+      margin-bottom: 16px;
+      color: #2b1e18;
+    }
+
+    .merci-container p {
+      font-size: 15px;
+      color: #6f625a;
+      margin-bottom: 32px;
+    }
+
+    .order-box {
+      border-top: 1px solid #e0d6cc;
+      margin-top: 40px;
+      padding-top: 30px;
+      text-align: left;
+    }
+
+    .order-line {
+      display: flex;
+      justify-content: space-between;
+      margin: 10px 0;
+      font-size: 14px;
+      color: #2b1e18;
+    }
+
+    .order-total {
+      font-weight: 600;
+      margin-top: 16px;
+      border-top: 1px solid #e0d6cc;
+      padding-top: 12px;
+    }
+
+    .merci-actions {
+      margin-top: 40px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      align-items: center;
+    }
+
+    .merci-actions button,
+    .merci-actions a {
+      padding: 14px 28px;
+      background: #2b1e18;
+      color: #f7f3ee;
+      border-radius: 999px;
+      text-decoration: none;
+      font-size: 14px;
+      border: none;
+      cursor: pointer;
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header class="header">
+  <div class="header-top">
+    <div class="header-left"><a href="#">Profil</a></div>
+    <div class="header-center">
+      <img src="assets/images/logo-header.png" alt="ELLE Maroquinerie">
+    </div>
+    <div class="header-right">
+      <a href="panier.html">Panier</a>
+      <a href="#">Recherche</a>
+      <a href="admin-login.html">Admin</a>
+    </div>
+  </div>
+
+  <nav class="header-nav">
+  <a href="boutique.html">LA BOUTIQUE</a>
+  <a href="notrehistoire.html">NOTRE HISTOIRE</a>
+  <a href="contact.html">CONTACT</a>
+</nav>
+
+</header>
+
+<!-- CONTENU -->
+<main>
+  <div class="merci-container">
+    <h1>Merci pour votre commande 👜</h1>
+    <p id="orderMeta"></p>
+
+    <div class="order-box" id="orderBox"></div>
+
+    <div class="merci-actions">
+      <button id="downloadInvoice">Télécharger la facture PDF</button>
+      <button id="sendEmail">Envoyer la confirmation par email</button>
+      <a href="boutique.html">Retour à la boutique</a>
+    </div>
+  </div>
+</main>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-main">
+    <div class="footer-left">
+      <h3>INFORMATIONS</h3>
+      <p>Conditions générales de vente</p>
+      <p>Mentions légales</p>
+    </div>
+
+    <div class="footer-center">
+      <img src="assets/images/logo-header.png" alt="ELLE Maroquinerie">
+    </div>
+
+    <div class="footer-right">
+      <p>
+        Une question, une commande spéciale ou un partenariat ?<br>
+        L’équipe ELLE Maroquinerie vous répond avec plaisir !
+      </p>
+      <a href="#" class="footer-btn">CONTACTEZ-NOUS →</a>
+    </div>
+  </div>
+
+  <div class="footer-divider"></div>
+
+  <div class="footer-bottom">
+    <img src="assets/images/Tiktok.png" alt="TikTok">
+  </div>
+</footer>
+
+<!-- JS dédié -->
+<script src="assets/js/merci.js" defer></script>
+
+</body>
+</html>

@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ELLE Maroquinerie •  Paiement</title>
+
+  <!-- CSS global -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  <!-- CSS page contact (à créer plus tard) -->
+  <link rel="stylesheet" href="assets/css/paiement.css">
+</head>
+
+<body>
+
+<!-- HEADER (identique aux autres pages) -->
+<header class="header">
+  <div class="header-top">
+    <div class="header-left">
+      <a href="#">Profil</a>
+    </div>
+
+    <div class="header-center">
+      <img src="assets/images/logo-header.png" alt="ELLE Maroquinerie">
+    </div>
+
+    <div class="header-right">
+      <a href="panier.html">Panier</a>
+      <a href="#">Recherche</a>
+      <a href="admin-login.html">Admin</a>
+    </div>
+  </div>
+
+  <nav class="header-nav">
+  <a href="boutique.html">LA BOUTIQUE</a>
+  <a href="notrehistoire.html">NOTRE HISTOIRE</a>
+  <a href="contact.html">CONTACT</a>
+</nav>
+</header>
+
+<!-- PAGE CONTACT / LIVRAISON -->
+<!-- PAGE PAIEMENT -->
+<main class="checkout-page">
+
+  <section class="checkout-layout">
+
+    <!-- COLONNE GAUCHE -->
+    <form class="checkout-left" id="checkoutForm">
+
+      <!-- CONTACT -->
+      <section class="checkout-block">
+        <h2>CONTACT</h2>
+
+        <div class="form-row">
+          <input type="text" placeholder="Prénom">
+          <input type="text" placeholder="Nom">
+        </div>
+
+        <input type="text" placeholder="Entreprise (optionnel)">
+        <input type="text" placeholder="Adresse">
+        <input type="text" placeholder="Appartement, suite, etc. (optionnel)">
+        <input type="text" placeholder="Code postal">
+        <input type="tel" placeholder="Téléphone">
+      </section>
+
+      <!-- PAIEMENT -->
+      <section class="checkout-block checkout-payment">
+        <h2>PAIEMENT</h2>
+
+        <input type="text" placeholder="Numéro de carte">
+        <input type="text" placeholder="Date d’expiration">
+        <input type="text" placeholder="Nom sur la carte">
+
+        <label class="checkbox-line">
+          <input type="checkbox">
+          Utiliser l’adresse de livraison
+        </label>
+
+        <div class="form-row">
+          <input type="text" placeholder="Prénom">
+          <input type="text" placeholder="Nom">
+        </div>
+
+        <input type="text" placeholder="Entreprise (optionnel)">
+        <input type="text" placeholder="Adresse">
+        <input type="text" placeholder="Appartement, suite, etc. (optionnel)">
+        <input type="text" placeholder="Code postal">
+        <input type="tel" placeholder="Téléphone">
+
+       
+      </section>
+
+    </form>
+
+    <!-- COLONNE DROITE -->
+  <!-- COLONNE DROITE -->
+<aside class="checkout-right">
+  <div class="checkout-summary">
+
+    <img src="assets/images/logo-header.png"
+         alt="ELLE Maroquinerie"
+         class="summary-logo">
+
+    <div class="summary-product">
+      <div class="summary-thumb"></div>
+      <div class="summary-info">
+        <p>Nom du sac</p>
+        <p>€€</p>
+      </div>
+    </div>
+
+    <div class="summary-line">
+      <span>Sous-total</span>
+      <span>€€</span>
+    </div>
+
+    <div class="summary-line">
+      <span>Expédition</span>
+      <span>Saisir une adresse d’expédition</span>
+    </div>
+
+    <div class="summary-line total">
+      <span>TOTAL</span>
+      <span>€€</span>
+    </div>
+
+    <div class="summary-actions">
+      <button
+  class="btn-pay"
+  type="submit"
+  form="checkoutForm">
+  PAYEZ MAINTENANT
+</button>
+
+    </div>
+
+  </div>
+</aside>
+
+
+  </section>
+<button class="btn-pay" type="submit" form="checkoutForm">
+  PAYEZ MAINTENANT
+</button>
+</main>
+
+
+<!-- FOOTER (identique aux autres pages) -->
+<footer class="footer">
+  <div class="footer-main">
+    <div class="footer-left">
+      <h3>INFORMATIONS</h3>
+      <p>Conditions générales de vente</p>
+      <p>Mentions légales</p>
+    </div>
+
+    <div class="footer-center">
+      <img src="assets/images/logo-header.png" alt="ELLE Maroquinerie">
+    </div>
+
+    <div class="footer-right">
+      <p>
+        Une question, une commande spéciale ou un partenariat ?<br>
+        L’équipe ELLE Maroquinerie vous répond avec plaisir !
+      </p>
+      <a href="#" class="footer-btn">CONTACTEZ-NOUS →</a>
+    </div>
+  </div>
+
+  <div class="footer-divider"></div>
+
+  <div class="footer-bottom">
+    <img src="assets/images/Tiktok.png" alt="TikTok">
+  </div>
+</footer>
+<script src="assets/js/paiement.js" defer></script>
+</body>
+</html>
