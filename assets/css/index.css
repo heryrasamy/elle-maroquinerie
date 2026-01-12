@@ -1,0 +1,166 @@
+/* =========================
+   RESET DE BASE
+========================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  font-family: "Playfair Display", serif;
+  background-color: #f8f4ee;
+  color: #2b2b2b;
+}
+
+/* =========================
+   HEADER
+========================= */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #f8f4ee;
+  z-index: 1000;
+  border-bottom: 1px solid rgba(0,0,0,0.05);
+}
+
+/* hauteur réelle du header */
+header .header-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+}
+
+/* logo */
+header img {
+  max-width: 120px;
+  margin-bottom: 10px;
+}
+
+/* navigation */
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  font-size: 14px;
+  letter-spacing: 1px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #2b2b2b;
+  font-weight: 500;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* =========================
+   COMPENSATION HEADER FIXE
+   (UNE SEULE FOIS)
+========================= */
+body {
+  padding-top: 140px; /* doit correspondre à la hauteur du header */
+}
+
+/* =========================
+   HERO SECTION
+========================= */
+.hero {
+  position: relative;
+  width: 100%;
+  height: 85vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* image de fond */
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+}
+
+/* contenu */
+.hero-content {
+  position: relative;
+  z-index: 3;
+  text-align: center;
+  max-width: 600px;
+  padding: 20px;
+}
+
+.hero-content h1 {
+  font-size: 42px;
+  line-height: 1.2;
+  margin-bottom: 20px;
+}
+
+.hero-description {
+  font-size: 16px;
+  margin-bottom: 30px;
+  opacity: 0.85;
+}
+
+/* bouton */
+.btn-primary {
+  display: inline-block;
+  padding: 14px 32px;
+  background-color: #3a2f2a;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 30px;
+  font-size: 14px;
+  letter-spacing: 1px;
+}
+
+.btn-primary:hover {
+  background-color: #2a201c;
+}
+
+/* sac */
+.hero-bag {
+  position: absolute;
+  right: 5%;
+  bottom: 0;
+  max-height: 80%;
+  z-index: 2;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 768px) {
+
+  body {
+    padding-top: 120px;
+  }
+
+  .hero {
+    height: 90vh;
+  }
+
+  .hero-content h1 {
+    font-size: 28px;
+  }
+
+  .hero-bag {
+    display: none;
+  }
+
+  nav {
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+}
