@@ -244,7 +244,8 @@ body {
     .header-right {
         order: 2;
         display: flex;
-        gap: 16px;
+        flex-direction: column;
+        gap: 14px;
         justify-content: center;
         flex-wrap: wrap;
         font-size: 14px;
@@ -252,13 +253,15 @@ body {
 
     /* MENU NAV */
     .header-nav {
-        margin-top: 20px;
-        display: flex;
-        justify-content: center;
-        gap: 24px;
-        flex-wrap: wrap;
-        text-align: center;
-    }
+    display: flex;
+    justify-content: center;
+    gap: 40px;            /* réduit */
+    margin-top: 30px;
+    padding-bottom: 35px;
+    flex-wrap: wrap;      /* 🔑 clé du problème */
+    text-align: center;
+}
+
 
     .header-nav a {
         font-size: 14px;
