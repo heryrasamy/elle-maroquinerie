@@ -264,4 +264,50 @@ body {
         font-size: 14px;
         white-space: nowrap; /* empêche la coupure des mots */
     }
+
+        /* =========================
+       HERO – CORRECTION MOBILE
+    ========================= */
+
+    .hero {
+        height: auto;
+        min-height: 70vh;
+    }
+
+        .hero-bg {
+        position: absolute;
+        height: 100%;
+        min-height: 100%;
+        object-fit: cover;
+    }
+
+
+    .hero-content {
+        position: relative;      /* on annule l'absolu desktop */
+        top: auto;
+        left: auto;
+        transform: none;
+        padding: 40px 20px;
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .hero-content h1 {
+        font-size: 26px;
+        line-height: 1.2;
+    }
+
+    .hero-description {
+        font-size: 16px;
+    }
+
+    .btn-primary {
+        font-size: 16px;
+        padding: 14px 28px;
+    }
+
+    .hero-bag {
+        display: none; /* normal sur mobile */
+    }
+
 }
