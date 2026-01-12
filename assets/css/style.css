@@ -1,4 +1,6 @@
-/* RESET */
+/* =========================
+   RESET
+========================= */
 * {
     margin: 0;
     padding: 0;
@@ -9,284 +11,182 @@
 body {
     background: #fff;
     color: #3a2f2f;
+    overflow-x: hidden; /* 🔒 empêche tout scroll horizontal */
 }
 
-/* HEADER */
-/* HEADER GLOBAL */
+/* =========================
+   HEADER
+========================= */
 .header {
     background: #fbf7f1;
-    padding-top: 25px;
+    padding: 25px 0;
 }
 
-/* LIGNE DU HAUT */
+/* TOP HEADER */
 .header-top {
     display: grid;
     grid-template-columns: 1fr auto 1fr;
     align-items: center;
-    padding: 0 60px;
+    padding: 0 40px;
 }
 
-/* GAUCHE / DROITE */
+/* ACTIONS */
 .header-left,
 .header-right {
-    font-size: 18px;
+    font-size: 16px;
     color: #3a2f2f;
 }
 
 .header-right {
     display: flex;
     justify-content: flex-end;
-    gap: 30px;
+    gap: 24px;
 }
 
 /* LOGO */
 .header-center img {
-  width: 200px;   /* ← SANS ESPACE */
-  height: auto;
-  display: block;
+    width: 180px;
+    height: auto;
+    display: block;
 }
 
-
-/* NAVIGATION */
+/* NAVIGATION DESKTOP */
 .header-nav {
     display: flex;
     justify-content: center;
-    gap: 80px;
-    margin-top: 30px;
-    padding-bottom: 35px;
+    gap: 36px;
+    margin-top: 24px;
+    padding-bottom: 24px;
+    flex-wrap: wrap;
+    text-align: center;
 }
 
 .header-nav a {
     text-decoration: none;
-    font-size: 20px;
+    font-size: 18px;
     color: #3a2f2f;
     letter-spacing: 0.5px;
+    white-space: nowrap;
 }
 
-/* SECTION HERO */
+/* =========================
+   HERO
+========================= */
 .hero {
     position: relative;
     width: 100%;
-    height: 503px;
+    height: 520px;
     overflow: hidden;
-    margin-top: 0;
 }
 
-
-/* FOND TISSU */
 .hero-bg {
     position: absolute;
-    width: 100%;         /* prend toute la largeur */
+    inset: 0;
+    width: 100%;
     height: 100%;
-    object-fit: cover;   /* rempli proprement sans déformation */
-    top: 0;
-    left: 0;
+    object-fit: cover;
     z-index: 1;
 }
 
-/* TEXTE */
 .hero-content {
     position: absolute;
-    top: 50px;
-    left: 90px;
+    top: 50%;
+    left: 80px;
     transform: translateY(-50%);
     z-index: 3;
-    max-width: 500px;
+    max-width: 520px;
 }
 
 .hero-content h1 {
-    font-size: 48px;
-    font-weight: 700;
-    line-height: 1.1;
+    font-size: 46px;
+    line-height: 1.15;
     margin-bottom: 20px;
-    color: #3a2f2f;
 }
 
 .hero-description {
     font-size: 20px;
-    margin-bottom: 35px;
-    color: #3a2f2f;
+    margin-bottom: 32px;
 }
 
-/* BOUTON */
 .btn-primary {
     display: inline-block;
     background: #3a2f2f;
     color: #fff;
     text-decoration: none;
-    padding: 15px 40px;
-    font-size: 20px;
+    padding: 14px 36px;
+    font-size: 18px;
     border-radius: 40px;
 }
 
 /* SAC */
 .hero-bag {
     position: absolute;
-    right: 40px;       /* alignement fidèle Figma */
+    right: 40px;
     bottom: 0;
-    height: 430px;     /* ajusté pour la proportion */
+    height: 420px;
     z-index: 2;
 }
 
-/* FOOTER */
-/* FOOTER GLOBAL */
-.footer {
-    background-color: #2f2320;
-    color: #f5efe8;
-    margin-top: 80px;
-}
-
-/* ZONE PRINCIPALE */
-.footer-main {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1.6fr;
-    align-items: center;
-    padding: 60px 80px;
-    gap: 40px;
-}
-
-/* GAUCHE */
-.footer-left h3 {
-    font-size: 26px;
-    margin-bottom: 25px;
-}
-
-.footer-left ul {
-    list-style: none;
-    padding: 0;
-}
-
-.footer-left li {
-    margin-bottom: 15px;
-}
-
-.footer-left a {
-    color: #f5efe8;
-    text-decoration: none;
-    font-size: 18px;
-}
-
-/* CENTRE */
-.footer-center {
-    text-align: center;
-}
-
-.footer-center img {
-    height: 60px;
-}
-
-/* DROITE */
-.footer-right p {
-    font-size: 20px;
-    line-height: 1.4;
-    margin-bottom: 30px;
-}
-
-/* BOUTON */
-.footer-btn {
-    display: inline-block;
-    background: #f5efe8;
-    color: #2f2320;
-    padding: 18px 42px;
-    border-radius: 40px;
-    text-decoration: none;
-    font-size: 18px;
-}
-
-/* LIGNE */
-.footer-divider {
-    height: 1px;
-    background: rgba(245,239,232,0.4);
-    margin: 0 80px;
-}
-
-/* BAS */
-.footer-bottom {
-    display: flex;
-    justify-content: flex-end;
-    padding: 25px 80px;
-}
-
-.footer-bottom img {
-    height: 28px;
-}
 /* =========================
-   HEADER RESPONSIVE
+   BREAKPOINT ÉCRANS MOYENS
+   (clé du bug PC)
 ========================= */
+@media (max-width: 1100px) {
 
-@media (max-width: 768px) {
-
-    /* HEADER GLOBAL */
-    .header {
-        padding: 20px 16px;
+    .header-nav {
+        flex-direction: column;
+        gap: 14px;
     }
 
-    /* TOP HEADER */
+    .hero-content {
+        left: 40px;
+    }
+}
+
+/* =========================
+   MOBILE
+========================= */
+@media (max-width: 768px) {
+
+    /* HEADER */
     .header-top {
         display: flex;
         flex-direction: column;
-        align-items: center;
         gap: 12px;
-    }
-
-    /* LOGO */
-    .header-center {
-        order: 1;
+        padding: 0 16px;
     }
 
     .header-center img {
-        height: 48px;
-        width: 100px;
+        width: 120px;
     }
 
-    /* ACTIONS (Profil / Panier / Recherche / Admin) */
     .header-left,
     .header-right {
-        order: 2;
-        display: flex;
-        flex-direction: column;
-        gap: 14px;
         justify-content: center;
-        flex-wrap: wrap;
+        gap: 16px;
         font-size: 14px;
+        flex-wrap: wrap;
     }
 
-    /* MENU NAV */
     .header-nav {
-    display: flex;
-    justify-content: center;
-    gap: 40px;            /* réduit */
-    margin-top: 30px;
-    padding-bottom: 35px;
-    flex-wrap: wrap;      /* 🔑 clé du problème */
-    text-align: center;
-}
-
+        flex-direction: column;
+        gap: 12px;
+        margin-top: 16px;
+    }
 
     .header-nav a {
-        font-size: 14px;
-        white-space: nowrap; /* empêche la coupure des mots */
+        font-size: 16px;
+        white-space: normal;
     }
 
-        /* =========================
-       HERO – CORRECTION MOBILE
-    ========================= */
-
+    /* HERO MOBILE */
     .hero {
         height: auto;
         min-height: 70vh;
     }
 
-        .hero-bg {
-        position: absolute;
-        height: 100%;
-        min-height: 100%;
-        object-fit: cover;
-    }
-
-
     .hero-content {
-        position: relative;      /* on annule l'absolu desktop */
+        position: relative;
         top: auto;
         left: auto;
         transform: none;
@@ -297,7 +197,6 @@ body {
 
     .hero-content h1 {
         font-size: 26px;
-        line-height: 1.2;
     }
 
     .hero-description {
@@ -310,7 +209,6 @@ body {
     }
 
     .hero-bag {
-        display: none; /* normal sur mobile */
+        display: none;
     }
-
 }
