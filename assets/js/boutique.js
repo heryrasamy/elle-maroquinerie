@@ -5,7 +5,9 @@ const products = JSON.parse(localStorage.getItem("products")) || [];
 console.log("Produits boutique :", products);
 
 // 2️⃣ Cibler la grille Figma existante
-const products = JSON.parse(localStorage.getItem("products")) || [
+const storedProducts = JSON.parse(localStorage.getItem("products")) || [];
+
+const products = storedProducts.length > 0 ? storedProducts : [
     {
         id: 1,
         title: "Ceinture cuir noir",
