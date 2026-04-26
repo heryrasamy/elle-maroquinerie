@@ -5,7 +5,22 @@ const products = JSON.parse(localStorage.getItem("products")) || [];
 console.log("Produits boutique :", products);
 
 // 2️⃣ Cibler la grille Figma existante
-const grid = document.getElementById("boutiqueGrid");
+const products = JSON.parse(localStorage.getItem("products")) || [
+    {
+        id: 1,
+        title: "Sac Élégance",
+        price: 120,
+        description: "Marron chocolat",
+        image: "assets/images/image sac.png"
+    },
+    {
+        id: 2,
+        title: "Sac Capsule",
+        price: 95,
+        description: "Collection capsule",
+        image: "assets/images/image sac.png"
+    }
+];
 
 if (!grid) {
     console.error("❌ boutiqueGrid introuvable dans le HTML");
@@ -23,13 +38,15 @@ if (!grid) {
 
         // Contenu de la carte (fidèle Figma)
         card.innerHTML = `
-            <div class="product-image"></div>
-            <div class="product-line">
-                <span class="product-name">${p.title}</span>
-                <span class="product-price">${p.price} €</span>
-            </div>
-            <div class="product-color">${p.description}</div>
-        `;
+    <div class="product-image">
+        <img src="${p.image}" alt="${p.title}">
+    </div>
+    <div class="product-line">
+        <span class="product-name">${p.title}</span>
+        <span class="product-price">${p.price} €</span>
+    </div>
+    <div class="product-color">${p.description}</div>
+`;
 
         // Clic → fiche produit
         card.addEventListener("click", () => {
