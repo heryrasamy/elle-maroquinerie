@@ -1,12 +1,9 @@
 console.log("boutique.js chargé");
 
-// 1️⃣ Lire les produits depuis le localStorage (créés via l’admin)
-const products = JSON.parse(localStorage.getItem("products")) || [];
-console.log("Produits boutique :", products);
-
-// 2️⃣ Cibler la grille Figma existante
+// 1️⃣ Lecture localStorage
 const storedProducts = JSON.parse(localStorage.getItem("products")) || [];
 
+// 2️⃣ Fallback si vide
 const products = storedProducts.length > 0 ? storedProducts : [
     {
         id: 1,
@@ -44,6 +41,10 @@ const products = storedProducts.length > 0 ? storedProducts : [
         image: "assets/images/products/cabas.jpg"
     }
 ];
+
+console.log("Produits utilisés :", products);
+const grid = document.getElementById("boutiqueGrid");
+console.log("Grille boutique :", grid);
 
 if (!grid) {
     console.error("❌ boutiqueGrid introuvable dans le HTML");
