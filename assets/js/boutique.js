@@ -8,17 +8,38 @@ console.log("Produits boutique :", products);
 const products = JSON.parse(localStorage.getItem("products")) || [
     {
         id: 1,
-        title: "Sac Élégance",
-        price: 120,
-        description: "Marron chocolat",
-        image: "assets/images/image sac.png"
+        title: "Ceinture cuir noir",
+        price: 39,
+        description: "Ceinture en cuir noir avec mousqueton doré",
+        image: "assets/images/products/ceinture-cuir-noir.jpg"
     },
     {
         id: 2,
-        title: "Sac Capsule",
-        price: 95,
-        description: "Collection capsule",
-        image: "assets/images/image sac.png"
+        title: "Sac franges bordeaux",
+        price: 89,
+        description: "Sac bordeaux avec franges et détails dorés",
+        image: "assets/images/products/sac-franges-bordeaux.jpg"
+    },
+    {
+        id: 3,
+        title: "Sac franges noir",
+        price: 89,
+        description: "Sac noir avec franges et détails dorés",
+        image: "assets/images/products/sac-franges-noir.jpg"
+    },
+    {
+        id: 4,
+        title: "Sac noir",
+        price: 79,
+        description: "Sac noir élégant avec anses",
+        image: "assets/images/products/sac-noir.jpg"
+    },
+    {
+        id: 5,
+        title: "Cabas bordeaux",
+        price: 79,
+        description: "Cabas bordeaux sobre et élégant",
+        image: "assets/images/products/cabas.jpg"
     }
 ];
 
@@ -39,8 +60,8 @@ if (!grid) {
         // Contenu de la carte (fidèle Figma)
         card.innerHTML = `
     <div class="product-image">
-        <img src="${p.image}" alt="${p.title}">
-    </div>
+    <img src="${p.image}" alt="${p.title}">
+</div>
     <div class="product-line">
         <span class="product-name">${p.title}</span>
         <span class="product-price">${p.price} €</span>
